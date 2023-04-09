@@ -1,18 +1,21 @@
 import './App.css'
-import Button from '../components/Button/button'
-import Display from '../components/display/display'
-import DayDisplay from '../components/day-display/day-display'
-import HourDisplay from '../components/hour-display/hour-display'
-import Input from '../components/input/input'
-import Header from '../components/header/header'
-import Footer from '../components/footer/footer'
-
-function App() {  
+import TopButtons from '../components/TopButtons/TopButtons'
+import Inputs from '../components/Inputs/inputs'
+import TimeAndLocation from '../components/TimeAndLocation/timeAndLocation'
+import TempAndDetails from '../components/tempAndDetails/tempAndDetails'
+import Forecast from '../components/Forecast/Forecast'
+function App() {
+  
   return (
     <>
-      <Header/>
-      <Input/>
-      <Footer/>
+      <div className='mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400'>
+          <TopButtons/>
+          <Inputs/>
+          <TimeAndLocation/>
+          <TempAndDetails/>
+          <Forecast title="Hourly forecast"/>
+          <Forecast title="Daily forecast"/>
+      </div>
     </>
   )
 }
